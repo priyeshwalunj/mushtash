@@ -1,0 +1,52 @@
+.mustash {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: absolute;
+  left: 30%;
+  box-shadow: 150px 200px 0 0 currentColor, 280px 200px 0 0 currentColor;
+  color: #000; }
+  .mustash:before {
+    content: "";
+    position: absolute;
+    top: 96px;
+    left: 50px;
+    width: 200px;
+    height: 96px;
+    border-bottom: 150px solid currentColor;
+    border-radius: 0 0 0 100%;
+    transform: rotate(-40deg);
+    transform-origin: right 210px; }
+  .mustash:after {
+    content: "";
+    position: absolute;
+    top: 96px;
+    left: 330px;
+    width: 200px;
+    height: 96px;
+    border-bottom: 150px solid currentColor;
+    border-radius: 0 0 100% 0;
+    transform: rotate(40deg);
+    transform-origin: left 210px; }
+
+.animate:before {
+  animation: shakeLeft 1s ease-in-out infinite; }
+.animate:after {
+  animation: shakeRight 1s ease-in-out infinite; }
+
+@keyframes shakeLeft {
+  0% {
+    transform: rotate(-50deg); }
+  50% {
+    transform: rotate(-30deg); }
+  100% {
+    transform: rotate(-50deg); } }
+@keyframes shakeRight {
+  0% {
+    transform: rotate(50deg); }
+  50% {
+    transform: rotate(30deg); }
+  100% {
+    transform: rotate(50deg); } }
+
+/*# sourceMappingURL=styles.css.map */
